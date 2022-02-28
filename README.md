@@ -24,7 +24,8 @@
 - 풀 문제 확인 : [Notion Link](https://www.notion.so/bc4fd8cb3da849fe8a8e8f93e6709726?v=b488c936da9a4c01a6bc9129ec463cce)  
 
 ---
-수정예정
+
 ❗ 문제 제출 방법   
+수정예정
     
 - 문제 제출 방법 확인 : [Notion Link](https://www.notion.so/55d91cd44a4c47a5a5b09168d5c057d0)  
