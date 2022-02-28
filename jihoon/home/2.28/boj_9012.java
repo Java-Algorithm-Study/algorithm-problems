@@ -11,7 +11,7 @@ public class baek9012 {
 		for (int i = 0; i < N; i++) {
 			String answer = "YES";
 			Stack<Integer> stack = new Stack<>();
-			String parenthesis = bf.readLine(); // 각 라인 
+			String parenthesis = bf.readLine(); // 읽어올 라인들 
 			char[] symbols = parenthesis.toCharArray(); // 라인의 문자들을 char로 쪼개 배열로 저장 
 			for (char symbol : symbols) {
 				// 여는 괄호 '(' 가 나오면 스택에 푸시한
