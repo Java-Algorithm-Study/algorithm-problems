@@ -10,7 +10,7 @@
   
 ![image](https://user-images.githubusercontent.com/23613481/155912370-903e4747-fb60-41d9-ac5e-f71e4bc8154e.png)
 
-📂 최상위 폴더 : "YOUR_ENGLISH_NAME_WITHOUT_LASTLAME"  
+📂 최상위 폴더 : "성을 제외한 영어이름"  
 📂 하위 폴더 : "home OR office"  
 📂 하위 폴더 : "오늘 날짜"  
 📋 제출 파일 이름 : "문제플랫폼_문제번호" 
