@@ -26,6 +26,5 @@
 ---
 
 ❗ 문제 제출 방법   
-수정예정
     
-- 문제 제출 방법 확인 : [Notion Link](https://www.notion.so/55d91cd44a4c47a5a5b09168d5c057d0)  
+- 문제 제출 방법 확인 : [Notion Link](https://bitter-satellite-819.notion.site/57e12a7522764e0497245cbc6aabb27d)  
