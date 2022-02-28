@@ -18,10 +18,9 @@
 ---
 
 ❗ 문제 확인하기  
-수정예정
 
 
-- 풀 문제 확인 : [Notion Link](https://www.notion.so/bc4fd8cb3da849fe8a8e8f93e6709726?v=b488c936da9a4c01a6bc9129ec463cce)  
+- 풀 문제 확인 : [Google SpreadSheet](https://docs.google.com/spreadsheets/d/1RxnnA7e-4uVIxxs-MBGXKJGQbVVeh4qFAQaPwTLo214/edit?usp=sharing)  
 
 ---
 
