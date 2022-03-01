@@ -46,6 +46,5 @@ public class boj_9012_advanced {
 
         String ans = (solution(parenthesis)) ? "YES" : "NO";
         System.out.println(ans);
-
     }
 }
