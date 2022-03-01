@@ -40,7 +40,7 @@ public class boj_1406 {
                 }
             } else if (order.charAt(0) == 'B') {
                 if (iter.hasPrevious()) {
-                    iter.previous(); // 제거할 문자
+                    iter.previous(); // 제거할 문자, iter.remove()를 사용하기 전에 꼭 previous() 나 next()를 호출해야 한다.
                     iter.remove();
                 }
             } else if (order.charAt(0) == 'P') {
