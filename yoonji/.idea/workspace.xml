@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="223f745c-5c78-4f63-ac2d-677d8d9a694c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../chris-an/2.28/Boj_10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chris-an/2.28/Boj_9012.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chris-an/2.28/Boj_9093.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chris-an/home/2.28/Boj_10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chris-an/home/2.28/Boj_9012.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chris-an/home/2.28/Boj_9093.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jeongwoo/home/2022-02-28/Boj_10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jeongwoo/home/2022-02-28/Boj_9012.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jeongwoo/home/2022-02-28/Boj_9093.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jihoon/home/2.28/boj_10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jihoon/home/2.28/boj_9093.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jihoon/home/2.28/boj_9012.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jihoon/home/2.28/boj_9012.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/2.28/boj_9012.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/2.28/boj_9012.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/2.28/boj_9093.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/2.28/boj_9093.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/2.28/boj_9093.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +43,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1646147362862</updated>
-      <workItem from="1646147371861" duration="924000" />
+      <workItem from="1646147371861" duration="541000" />
     </task>
     <servers />
   </component>
