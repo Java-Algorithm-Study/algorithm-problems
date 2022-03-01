@@ -48,7 +48,6 @@ public class Boj_10828 {
         StringTokenizer st;
         int capacity = Integer.parseInt(br.readLine());
         Boj_10828 sk = new Boj_10828(capacity);
-
         while(capacity > 0) {
 
             int input;
