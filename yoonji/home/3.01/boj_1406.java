@@ -6,7 +6,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
-// 삽입과 삭제 빈번하다
 // LinkedList에서 remove와 add는 리스트의 처음부터 끝까지 탐색하여 O(n)의 시간이 소요
 // ListIterator 활용
 public class boj_1406 {

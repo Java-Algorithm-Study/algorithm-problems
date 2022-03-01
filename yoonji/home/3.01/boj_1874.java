@@ -3,12 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Stack;
 
-// 문제자체가 이해가 잘 안되서 구글링을 해서 이해했다.
-// 이해한 바로는
-// 1. 수열을 입력받는다. -> input
-// 2. 현재 값부터 해당 값까지 정수를 스택에 push한다.(오름차순) -> +
-// 3. input값과 stack의 마지막 값이 같은 값인지 비교하여 같으면 pop, 같지 않으면 수열 만족X => NO 출력 & 종료
-// 한번에 출력하기위해  이용
 public class boj_1874 {
     public static void main(String[] args) throws IOException {
         solving();
