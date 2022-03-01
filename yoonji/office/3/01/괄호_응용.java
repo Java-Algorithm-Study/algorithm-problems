@@ -5,18 +5,8 @@ import java.util.Stack;
 
 public class 괄호_응용 {
     static Stack<Character> stack = new Stack<>();
-
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T = Integer.parseInt(br.readLine());
-        for (int i=0; i<T; i++) {
-            System.out.println(checkVPS(br.readLine()));
-            stack.clear();
-        }
-    }
-
     private static boolean checkVPS(String line) {
-        if (line.length() %2 !=0) return false; // 만약 길이가 홀수일 경우 return false
+        if (line.length() %2 !=0) return false; // 만약 길이가 홀수일 경우 반복할 필요 없음.
 
         for (char ch : line.toCharArray()) {
             if (ch == '{' || ch == '(' || ch == '[') {
@@ -29,28 +19,22 @@ public class 괄호_응용 {
                 }
                 else {
                     Character peek = stack.peek();
-                    if (ch == ')') {
-//                        if (isCouple(peek, '(')) return false;
-                        if (peek =='(') stack.pop();
-                        else return false;
-                    }
-                    else if (ch == '}') {
-                        if (peek =='{') stack.pop();
-                        else return false;
-                    }
-                    else {
-                        if (peek =='[') stack.pop();
-                        else return false;
-                    }
+                    if (ch == ')' && peek == '(') stack.pop();
+                    else if (ch == '}' && peek == '{') stack.pop();
+                    else if (ch == ']' && peek == '[') stack.pop();
+                    else return false;
                 }
             }
         }
         return stack.isEmpty();
     }
-/*
-    private static boolean isCouple(char peek, char pre) {
-        if (peek == pre) stack.pop();
-        else return false;
-    }*/
 
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int T = Integer.parseInt(br.readLine());
+        for (int i=0; i<T; i++) {
+            System.out.println(checkVPS(br.readLine()));
+            stack.clear();
+        }
+    }
 }
