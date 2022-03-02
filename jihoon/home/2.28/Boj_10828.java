@@ -2,14 +2,14 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class boj_10828 {
+public class Boj_10828 {
 	
 	int[] stack; // 스택을 담을 배열 선언 
 	int pointer = 0; // top값을 가르킬 포인터 선언 
 	
 	
 	// Stack 생성
-	boj_10828(int n) {
+	Boj_10828(int n) {
 		this.stack = new int[n]; // 스택배열을 주어진 라인만큼 초기화 
 	}
 	
@@ -55,7 +55,7 @@ public class boj_10828 {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		
 		int N = Integer.parseInt(bf.readLine());
-		boj_10828 stack = new boj_10828(N);
+		Boj_10828 stack = new Boj_10828(N);
 
 		
 		for (int i = 0; i < N; i++) {
