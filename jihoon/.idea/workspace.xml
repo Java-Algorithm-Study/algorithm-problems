@@ -3,15 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c75946d9-5d38-4328-a9b6-f0fb367c75d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/2.28/boj_10828.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/2.28/Boj_10828.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/2.28/boj_9012.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/2.28/Boj_9012.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/2.28/boj_9093.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/2.28/Boj_9093.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/3.1/boj_1406.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.1/Boj_1406.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/home/boj_10828.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/home/boj_10828.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/home/boj_1406.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/home/boj_1406.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/home/boj_9012.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/home/boj_9012.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/production/home/boj_9093.class" beforeDir="false" afterPath="$PROJECT_DIR$/production/home/boj_9093.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_10845.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_10845.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_10866.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_10866.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_1158.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_1158.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

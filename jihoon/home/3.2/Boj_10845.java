@@ -48,6 +48,7 @@ public class Boj_10845 {
         int N = Integer.parseInt(bf.readLine());
         for (int i = 0; i < N; i++) {
             String order = bf.readLine();
+            // contains를 썼는데 시간복잡도가 증가할 것 같다
             if (order.contains("push")) {
                 int number = Integer.parseInt(order.split(" ")[1]);
                 push(number);
