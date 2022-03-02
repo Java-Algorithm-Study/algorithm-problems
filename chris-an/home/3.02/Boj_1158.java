@@ -8,7 +8,6 @@ public class Boj_1158 {
     /*
         요세푸스 순열 문제
     */
-
     public static void main(String[] args) throws IOException {
 
         Scanner sc = new Scanner(System.in);
