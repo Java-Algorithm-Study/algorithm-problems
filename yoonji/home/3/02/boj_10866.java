@@ -4,7 +4,6 @@ import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-// 출력은 매 명령마다 출력하므로 그냥 print로 진행
 public class boj_10866 {
     public static void main(String[] args) throws IOException {
         Deque<String> deque = new ArrayDeque<>();
@@ -50,12 +49,10 @@ public class boj_10866 {
     private static void print(Object o) {
         System.out.println(o);
     }
-
     private static void removeFirst(Deque<String> deque) {
         if (deque.isEmpty()) print(-1);
         else print(deque.removeFirst());
     }
-
     private static void removeLast(Deque<String> deque) {
         if (deque.isEmpty()) print(-1);
         else print(deque.removeLast());

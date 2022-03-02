@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.Deque;
+
 // 큐를 구현한 ArrayDeque
 public class boj_10845 {
     public static void main(String[] args) throws IOException {
