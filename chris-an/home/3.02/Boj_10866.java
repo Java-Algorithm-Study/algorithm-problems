@@ -14,6 +14,9 @@ public class Boj_10866 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         ArrayDeque<Integer> dq = new ArrayDeque<>();
+        Deque<Integer> dq2 = new ArrayDeque<>();
+
+        dq2.removeFirst();
 
         int orderCnt = Integer.parseInt(br.readLine());
         while (orderCnt-- > 0) {
