@@ -41,7 +41,7 @@ public class Boj_1918 {
                     }
                     if (!sk.isEmpty()) sk.pop(); //'('연산자를 꺼내준다.
                 } else { // + - / * 연산자 일경우
-                    while (!sk.isEmpty() && swap(operation.indexOf(ch[i])) <= swap(operation.indexOf((sk.peek())))) {  // 조건이 +, - 가 같이 나올 수 없고, *,/ 가 같이 나올 수 없다.
+                    while (!sk.isEmpty() && swap(operation.indexOf(ch[i])) <= swap(operation.indexOf((sk.peek())))) {
                         sb.append(sk.pop());
                     }
                     sk.push(ch[i]);
