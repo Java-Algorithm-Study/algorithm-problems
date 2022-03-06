@@ -1,5 +1,7 @@
-import java.util.Scanner;
-import java.util.Stack;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
 
 /**
  * [17298] 오큰수
@@ -7,17 +9,20 @@ import java.util.Stack;
  */
 
 public class Boj17298 {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        int n = sc.nextInt();
+     public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int n = Integer.parseInt(br.readLine());
         int[] arr = new int[n];
-        Stack<Integer> stack = new Stack<>();
         int[] ans = new int[n];
 
+        Stack<Integer> stack = new Stack<>();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+
+        StringBuilder sb = new StringBuilder();
 
         for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
+            arr[i] = Integer.parseInt(st.nextToken());
         }
 
         for (int i = 0; i < arr.length; i++) {
@@ -31,7 +36,8 @@ public class Boj17298 {
         }
 
         for (int i : ans) {
-            System.out.print(i + " ");
+            sb.append(i).append(" ");
         }
+        System.out.println(sb.toString());
     }
 }
