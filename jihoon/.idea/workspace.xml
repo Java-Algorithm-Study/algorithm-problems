@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c75946d9-5d38-4328-a9b6-f0fb367c75d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_10845.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_10845.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_10866.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_10866.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/3.2/Boj_1158.java" beforeDir="false" afterPath="$PROJECT_DIR$/home/3.2/Boj_1158.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/home.iml" beforeDir="false" afterPath="$PROJECT_DIR$/home/home.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,49 +50,49 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Application.Boj_1158">
-    <configuration name="Boj_10845" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Boj_10845" />
+  <component name="RunManager" selected="Application.Boj_1934">
+    <configuration name="Boj_10430" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Boj_10430" />
       <module name="home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Boj_10866" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Boj_10866" />
+    <configuration name="Boj_10824" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Boj_10824" />
       <module name="home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Boj_1158" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Boj_1158" />
+    <configuration name="Boj_11656" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Boj_11656" />
       <module name="home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Boj_1406" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Boj_1406" />
+    <configuration name="Boj_1934" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Boj_1934" />
       <module name="home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="boj_9012_advanced" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="boj_9012_advanced" />
-      <module name="office" />
+    <configuration name="Boj_2609" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Boj_2609" />
+      <module name="home" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Boj_1158" />
-        <item itemvalue="Application.Boj_10845" />
-        <item itemvalue="Application.Boj_10866" />
-        <item itemvalue="Application.boj_9012_advanced" />
-        <item itemvalue="Application.Boj_1406" />
+        <item itemvalue="Application.Boj_1934" />
+        <item itemvalue="Application.Boj_2609" />
+        <item itemvalue="Application.Boj_10430" />
+        <item itemvalue="Application.Boj_11656" />
+        <item itemvalue="Application.Boj_10824" />
       </list>
     </recent_temporary>
   </component>

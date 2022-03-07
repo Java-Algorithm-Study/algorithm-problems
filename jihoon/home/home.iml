@@ -6,6 +6,12 @@
       <sourceFolder url="file://$MODULE_DIR$/2.28" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/3.1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/3.2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.7" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/3.9" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
