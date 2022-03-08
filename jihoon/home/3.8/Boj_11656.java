@@ -12,6 +12,7 @@ public class Boj_11656 {
         for (int i = 0; i < line.length(); i++) {
             str[i] = line.substring(i, line.length());
         }
+
         Arrays.sort(str);
         for (String string : str) {
             System.out.println(string);
