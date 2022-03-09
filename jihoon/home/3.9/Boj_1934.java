@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Boj_1934 {
-    // O(log(n))
+    // 유클리드 호제법 O(log(n))
     private static int gcd(int a, int b) {
         while (b != 0) {
             int r = a % b;
