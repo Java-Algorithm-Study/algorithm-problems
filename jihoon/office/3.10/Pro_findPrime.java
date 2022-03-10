@@ -8,7 +8,7 @@ public class Pro_findPrime {
     static HashSet<Integer> set = new HashSet();
 
     public static void dfs(String candidate, String remain) {
-        // 고른 candidata을 set에 추가한다.
+        // 고른 candidate을 set에 추가한다.
         if (!candidate.equals("")) set.add(Integer.parseInt(candidate));
 
         // 남은 숫자 중 한 개를 더해 새로운 조합을 만든다
