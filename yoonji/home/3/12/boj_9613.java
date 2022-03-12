@@ -11,13 +11,21 @@ import java.util.StringTokenizer;
 public class boj_9613 {
     static long sum = 0;    // ※ N은 1,000,000을 안넘지만 sum은 넘을 수 있음.
     static StringBuilder sb = new StringBuilder();
+
+    @Override
+    public String toString() {
+        super.toString();
+        return this.toString();
+    }
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
-        ArrayList<Integer> list;
+        
         // T줄 입력받기
         for (int i=0; i<T; i++) {
-            list = new ArrayList<>();
+            ArrayList<Integer> list = new ArrayList<>();   // 매 TC마다 초기화
+            System.out.println(list.toString());
             StringTokenizer st = new StringTokenizer(br.readLine(), " ");
             int N = Integer.parseInt(st.nextToken());
             while (N-- >0) {
