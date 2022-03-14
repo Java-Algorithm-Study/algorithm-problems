@@ -11,15 +11,14 @@ public class boj_1212 {
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
         StringBuilder answer = new StringBuilder();
-
-        // 첫번째 자리 먼저 처리 (0 지워야함)
-
+        // 각 자리수 반복
         for (int i=0; i<input.length();i++) {
             int[] tmp = map.get(input.charAt(i));
+            // 8진수에 해당하는 2진수를 배열에서 찾아서 append
             for (int j=0; j<3; j++) {
                 answer.append(tmp[j]);
             }
-            if (i==0) {   // 첫번째 문자의 앞 0을 지워야함
+            if (i==0) {   // 첫번째 문자의 앞 0을 지워야함. string을 int로 바꾸면 0이 있을 경우 자동으로 지워짐
                 int forNoFirstZero = Integer.parseInt(answer.toString());
                 answer.setLength(0);
                 answer.append(forNoFirstZero);
