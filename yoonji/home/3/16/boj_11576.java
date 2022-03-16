@@ -14,7 +14,7 @@ public class boj_11576 {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int A = Integer.parseInt(st.nextToken());
         int B = Integer.parseInt(st.nextToken());
-        int n = Integer.parseInt(br.readLine());  // 사용x
+        int n = Integer.parseInt(br.readLine());
         // A진법 숫자 (0이상 A미만) -> 10진법
         // 공백을 구분으로 각 A의 0승, 1승,.. 곱해서 더하면 10진법이 된다.  (문제 의도 파악하기 어려움)
         int decimal = 0;
