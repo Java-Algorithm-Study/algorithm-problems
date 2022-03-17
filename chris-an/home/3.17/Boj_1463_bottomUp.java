@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // Bottom-up 방식.
+// 2번째로 빠름,
 public class Boj_1463_bottomUp {
     static int [] dp;
     public static void main(String[] args) throws IOException {
