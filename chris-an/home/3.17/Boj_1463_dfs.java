@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // DFS 로 푼 문제.
+// 가장 빠름
 public class Boj_1463_dfs {
 
     static int min;
