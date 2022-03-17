@@ -9,12 +9,14 @@ public class Boj_10866 {
         큐의 양쪽에 데이터를 넣고 뺄 수 있는 형태의 자료구조를 의미한다.
         하나의 자료구조에 Queue 와 Stack 을 합쳐 놓은 형태라 할 수 있다.
      */
-
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         ArrayDeque<Integer> dq = new ArrayDeque<>();
+        Deque<Integer> dq2 = new ArrayDeque<>();
+
+        dq2.removeFirst();
 
         int orderCnt = Integer.parseInt(br.readLine());
         while (orderCnt-- > 0) {
