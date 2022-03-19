@@ -6,7 +6,7 @@ import java.util.Scanner;
  * https://www.acmicpc.net/problem/10828
  */
 
-public class Main {
+public class Boj10828 {
 
     private static ArrayList<Integer> stack = new ArrayList<>();
 

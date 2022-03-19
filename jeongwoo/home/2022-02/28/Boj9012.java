@@ -6,7 +6,7 @@ import java.util.Stack;
  * https://www.acmicpc.net/problem/9012
  */
 
-public class Boj_9012 {
+public class Boj9012 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -15,8 +15,6 @@ public class Boj_9012 {
         for (int i = 0; i < n; i++) {
             System.out.println(checkVPS(sc.next()));
         }
-
-
     }
 
     private static String checkVPS(String str) {
