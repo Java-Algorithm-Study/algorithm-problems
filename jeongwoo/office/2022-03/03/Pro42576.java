@@ -5,7 +5,7 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/42576
  */
 
-public class Solution {
+public class Pro42576 {
     public String solution(String[] participant, String[] completion) {
 
         String answer = "";
