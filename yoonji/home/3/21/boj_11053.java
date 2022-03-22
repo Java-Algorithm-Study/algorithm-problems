@@ -14,13 +14,13 @@ public class boj_11053 {
         int A = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         int[] nums = new int[A + 1];
+        int[] dp = new int[A + 1];    //1개~A개
+
         for (int i = 1; i <= A; i++)
             nums[i] = Integer.parseInt(st.nextToken());
-        int[] dp = new int[A + 1];    //1개~A개
         // 기본으로 모두 배열의 길이는 1
-        for (int i = 1; i <= A; i++) dp[i] = 1;
+        for (int i = 0; i <= A; i++) dp[i] = 1;
 
-        dp[1] = 1;
         int max = Integer.MIN_VALUE;
         // 이중 for문 : i보다 앞에 위치한 j들과 비교
         for (int i = 2; i <= A; i++) {
