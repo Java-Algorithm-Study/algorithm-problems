@@ -1,4 +1,4 @@
-class Solution {
+public class Pro_77484 {
     public int getNumber(int n) {
         int cnt = 0;
         for (int i = 1; i * i <= n; i++) {
