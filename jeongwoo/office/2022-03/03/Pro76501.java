@@ -3,7 +3,7 @@
  * https://programmers.co.kr/learn/courses/30/lessons/76501
  */
 
-public class Solution {
+public class Pro76501 {
     public int solution(int[] absolutes, boolean[] signs) {
         int answer = 0;
         

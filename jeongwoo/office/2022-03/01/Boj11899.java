@@ -6,7 +6,7 @@ import java.util.Stack;
  * https://www.acmicpc.net/problem/11899
  */
 
-public class Boj_11899 {
+public class Boj11899 {
     public static void main(String[] args) {
         solving();
     }
