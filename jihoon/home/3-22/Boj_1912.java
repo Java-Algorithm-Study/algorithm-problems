@@ -22,6 +22,7 @@ public class Boj_1912 {
         int max = Integer.MIN_VALUE;
         for (int num : dp)
             if (num > max) max = num;
+        
         System.out.println(max);
     }
 }

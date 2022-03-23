@@ -8,7 +8,7 @@ public class Boj_2004 {
         int count = 0;
 
         while(num >= 5) {
-            count += num/5;
+            count += num / 5;
             num /= 5;
         }
         return count;
@@ -18,7 +18,7 @@ public class Boj_2004 {
         int count = 0;
 
         while(num >= 2) {
-            count += num/2;
+            count += num / 2;
             num /= 2;
         }
         return count;
