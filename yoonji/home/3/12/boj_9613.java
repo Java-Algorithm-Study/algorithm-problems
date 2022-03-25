@@ -21,7 +21,7 @@ public class boj_9613 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int T = Integer.parseInt(br.readLine());
-        
+
         // T줄 입력받기
         for (int i=0; i<T; i++) {
             ArrayList<Integer> list = new ArrayList<>();   // 매 TC마다 초기화

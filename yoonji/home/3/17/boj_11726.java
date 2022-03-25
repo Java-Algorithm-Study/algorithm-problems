@@ -15,7 +15,8 @@ public class boj_11726 {
         dp[1] = 1;
         dp[2] = 2;
         for (int i=3; i<=N; i++) {
-            dp[i] = (dp[i-1] + dp[i-2]) % 10007;  // 값을 10007로 나눈 나머지
+            System.out.println(dp[i-1] + dp[i-2]);
+            dp[i] = (dp[i-1] + dp[i-2]);  // 값을 10007로 나눈 나머지
         }
         System.out.println(dp[N]);
     }
