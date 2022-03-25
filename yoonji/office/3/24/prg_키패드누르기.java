@@ -25,7 +25,6 @@ class prg_키패드누르기 {
             else if (numbers[i]%3 == 0) moveFinger(numPosition[numbers[i]], "R");   // 오른쪽
             else doMiddleCase(numPosition[numbers[i]], hand);    // 나머지가 2이면 중앙
         }
-
         // 3. 반환
         return sb.toString();
     }
@@ -45,13 +44,8 @@ class prg_키패드누르기 {
     }
     // 손가락의 위치를 이동시키며 답에 추가한다.
     public void moveFinger(int[] touchedNumPos, String finger) {
-        if ("L".equals(finger)) {
-            lPointer[0] = touchedNumPos[0];
-            lPointer[1] = touchedNumPos[1];
-        }else {
-            rPointer[0] = touchedNumPos[0];
-            rPointer[1] = touchedNumPos[1];
-        }
+        if ("L".equals(finger)) lPointer= touchedNumPos;
+        else rPointer = touchedNumPos;
         sb.append(finger);
     }
 
