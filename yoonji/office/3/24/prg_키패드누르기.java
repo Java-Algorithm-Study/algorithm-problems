@@ -42,7 +42,7 @@ class prg_키패드누르기 {
             else moveFinger(numPosition, "L");
         }
     }
-    // 손가락의 위치를 이동시키며 답에 추가한다.
+    // 손가락의 위치를 이동시키며 답에 추가한다. (수정)
     public void moveFinger(int[] touchedNumPos, String finger) {
         if ("L".equals(finger)) lPointer= touchedNumPos;
         else rPointer = touchedNumPos;
