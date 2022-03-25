@@ -15,12 +15,20 @@ public class boj_17103 {
         // 1.소수는 false, 소수x는 true 표시하기 : 에라토스테네스의 체
         // 100만까지의 소수를 구하기위해 100만 배열 생성 (아래에서도 인덱스 0,1에는 접근하지 않으므로초기화x)
         nonPrime = new boolean[LIMIT];
+
+        int iSum=0;
+        int jSum = 0;
         for (int i=2; i*i < LIMIT; i++) {   // 내부 for문을 위해 i*i 로 제한둔다.
+            iSum++;
             if (!nonPrime[i]) {  // 소수라면
                 //소수가 아닌 곳 표시
-                for(int j=i*i; j< LIMIT; j+=i) nonPrime[j] = true;  // 소수*소수, 소수*소수+소수 -> 소수가 아닌 곳을 모두 체크할 수 있음
+                for(int j=i*i; j< LIMIT; j+=i) {
+                    jSum++;
+                    nonPrime[j] = true;  // 소수*소수, 소수*소수+소수 -> 소수가 아닌 곳을 모두 체크할 수 있음
+                }
             }
         }
+        System.out.println(iSum + ", " + jSum);
         while (T-- >0) {
             int N = Integer.parseInt(br.readLine());  // 2< 2N <= 1000000
             getAnswer(N);
