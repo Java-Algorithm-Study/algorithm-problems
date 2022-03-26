@@ -2,8 +2,9 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
-// d[i] = min( min( d[i-1][1], d[i-1][2]), min (d[i+1][1], d[i+1][2]) )  (1, N일 때 제외)
-
+// d[i][0] = min( d[i-1][1], d[i-1][2] ) + R
+// d[i][1] = min( d[i-1][0], d[i-1][2] ) + G
+// d[i][2] = min( d[i-1][0], d[i-1][1] ) + B
 public class boj_1149 {
     static int[][] dp;
     static int N;
