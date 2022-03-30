@@ -1,38 +1,48 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class Boj_3085 {
     
+    // 연속된 사탕 최대갯수 세기
     public static int countRowCol(String[][] board) {
-        int maxRow = 0;
-        int maxCol = 0;
-
+        int maxRow = 1;
+        int maxCol = 1;
         for (int i = 0; i < board.length; i++) {
-            Map<String, Integer> rowMap = new HashMap<>();
-            Map<String, Integer> colMap = new HashMap<>();
-            for (int j = 0; j < board.length; j++) {
-                String rowStr = board[i][j];
-                String colStr = board[j][i];
-                int rowCount = rowMap.getOrDefault(rowStr, 0);
-                int colCount = colMap.getOrDefault(colStr, 0);
-                rowMap.put(rowStr, rowCount + 1);
-                colMap.put(colStr, colCount + 1);
+            int rowCount = 1;
+            int colCount = 1;
+            ArrayList<Integer> rowList = new ArrayList<>();
+            ArrayList<Integer> colList = new ArrayList<>();
+            for (int j = 1; j < board.length; j++) {
+                if (board[i][j].equals(board[i][j - 1])) {
+                    rowList.add(++rowCount);
+                } else {
+                    rowCount = 1;
+                }
+                
+                if (board[j][i].equals(board[j - 1][i])) {
+                    colCount++;
+                    colList.add(colCount);
+                } else {
+                    colCount = 1;
+                }
             }
-    
-            for (int count : rowMap.values())
-                maxRow = Math.max(maxRow, count);
+            for (int n : rowList) {
+                rowCount = Math.max(n, rowCount);
+            }
             
-            for (int count : colMap.values())
-                maxCol = Math.max(maxCol, count);
+            for (int n : colList)
+                colCount = Math.max(n, colCount);
             
+            maxRow = Math.max(rowCount, maxRow);
+            maxCol = Math.max(colCount, maxCol);
         }
+        
         return Math.max(maxRow, maxCol);
     }
     
+    // 주어진 보드의 인접 행끼리 swap 한다
     public static String[][] swapRow(String[][] board, int i, int j) {
         String temp = board[i][j];
         board[i][j] = board[i][j - 1];
@@ -40,6 +50,7 @@ public class Boj_3085 {
         return board;
     }
     
+    // 주어진 보드의 인접 열끼리 swap한다
     public static String[][] swapCol(String[][] board, int i, int j) {
         String temp = board[j][i];
         board[j][i] = board[j - 1][i];
@@ -60,6 +71,7 @@ public class Boj_3085 {
             }
         }
     
+        // 행을 swap하며 최대갯수 세기
         int maxRow = 0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 1; j < board[i].length; j++) {
@@ -70,6 +82,7 @@ public class Boj_3085 {
             }
         }
     
+        // 열을 swap하며 최대갯수 세기
         int maxCol = 0;
         for (int i = 0; i < board.length; i++) {
             for (int j = 1; j < board[i].length; j++) {
@@ -79,8 +92,7 @@ public class Boj_3085 {
                 swapCol(board, i, j);
             }
         }
-//        System.out.println(Arrays.toString(board[0]));
-//        System.out.println(countRowCol(board));
+        
         System.out.println(Math.max(maxRow, maxCol));
     }
 }
