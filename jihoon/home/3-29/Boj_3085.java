@@ -14,6 +14,7 @@ public class Boj_3085 {
             int colCount = 1;
             ArrayList<Integer> rowList = new ArrayList<>();
             ArrayList<Integer> colList = new ArrayList<>();
+            
             for (int j = 1; j < board.length; j++) {
                 if (board[i][j].equals(board[i][j - 1])) {
                     rowList.add(++rowCount);
@@ -22,15 +23,14 @@ public class Boj_3085 {
                 }
                 
                 if (board[j][i].equals(board[j - 1][i])) {
-                    colCount++;
-                    colList.add(colCount);
+                    colList.add(++colCount);
                 } else {
                     colCount = 1;
                 }
             }
-            for (int n : rowList) {
+            
+            for (int n : rowList)
                 rowCount = Math.max(n, rowCount);
-            }
             
             for (int n : colList)
                 colCount = Math.max(n, colCount);
