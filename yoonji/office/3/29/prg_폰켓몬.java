@@ -1,9 +1,7 @@
-public class prg_폰켓몬 {
-}
 import java.util.Set;
-        import java.util.HashSet;
+import java.util.HashSet;
 
-class Solution {
+class prg_폰켓몬 {
     public int solution(int[] nums) {
         Set<Integer> set = new HashSet<>();
         for (int n: nums) {
