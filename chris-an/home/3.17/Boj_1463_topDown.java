@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -24,7 +23,6 @@ public class Boj_1463_topDown {
         dpTable[n] = makeToOne(n - 1)+1; // An = An-1 + 1 을 기본적인 점화식으로 세팅해 둘 수 있다.
         // 위의 점화식이 나올 수 있는 이유를 예시로 들면
         // 4라는 숫자는 3 에다가 '1을 뺀다'라는 조건을 사용하여 최종 1을 만들 수 있어서 그렇다.
-
 
         // 이 두 if문 로직은 위의 점화식으로 세팅을 하고도 최소값이 나올 수 있기 때문에 처리를 해줍니다.
         // 즉 점화식은, 최소값을 뽑을 수 있는 식이 아니고

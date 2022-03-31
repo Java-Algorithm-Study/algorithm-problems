@@ -9,6 +9,11 @@ public class Boj_3085 {
     static public int check(char[][] arr, int rowSt, int rowEnd, int colSt, int colEnd) {
         int result = Integer.MIN_VALUE;
 
+        // 열
+        /*  탐색 시작
+            →  →  →
+            →  →  →
+         */
         for (int i = rowSt; i <= rowEnd; i++) {
             int cnt = 1; // 1부터 시작 갯수 1초기화
             for (int j = 1; j < arr.length; j++) {
@@ -21,6 +26,13 @@ public class Boj_3085 {
             }
         }
 
+        // 행
+        /*
+             탐색 시작
+             ↓  ↓
+             ↓  ↓
+             ↓  ↓
+         */
         for (int i = colSt; i <= colEnd; i++) {
             int cnt = 1; // 1부터 시작 갯수 1초기화
             for (int j = 1; j < arr.length; j++) {
