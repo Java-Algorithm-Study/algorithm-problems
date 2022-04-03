@@ -12,7 +12,6 @@ public class boj_15654 {
     private static boolean[] visited;
     private static final StringBuilder answerSB = new StringBuilder();
     public static void main(String[] args) throws IOException {
-        // 1. 입력 및 초기화
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         N = Integer.parseInt(st.nextToken());
@@ -24,14 +23,12 @@ public class boj_15654 {
         for (int i=0; i<N; i++){
             nums[i] = Integer.parseInt(st.nextToken());
         }
-        // 2. 정렬 및 dfs 호출
         Arrays.sort(nums);
-        dfs(0, 0);
+        dfs(0);
         System.out.println(answerSB);
     }
 
-    private static void dfs(int depth, int num) {
-        // 깊이가 끝까지 온 경우
+    private static void dfs(int depth) {
         if (depth == limit) {
             for (int i:line) {
                 answerSB.append(i).append(" ");
@@ -39,12 +36,11 @@ public class boj_15654 {
             answerSB.append("\n");
             return;
         }
-        // 0부터 돌면서 이미 방문한 index를 제외하고 재귀호출
         for (int i=0; i<N; i++) {
             if (!visited[i]) {
                 visited[i] = true;
                 line[depth] = nums[i];
-                dfs(depth+1, i+1);
+                dfs(depth+1);   // 수는 깊이와 반복문에 따라 자동으로 처리됨
                 visited[i] = false; // 한 배열을 채웠으니
             }
         }
