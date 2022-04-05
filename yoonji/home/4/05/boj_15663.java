@@ -5,7 +5,7 @@ import java.util.*;
 
 // 순서가 있어야하고 중복이 발생하면 안된다 => SortedSet
 // N과 M(9)
-public class boj_15664 {
+public class boj_15663 {
     public static int N, limit;
     public static int[] nums;
     public static int[] line;
@@ -28,7 +28,7 @@ public class boj_15664 {
         }
         Arrays.sort(nums);
 
-        dfs(0, 0);
+        dfs(0);
 //        StringBuilder answerSB = new StringBuilder();
         for (String line : setNums) {
             System.out.println(line);
@@ -37,18 +37,18 @@ public class boj_15664 {
         }
 //        System.out.println(answerSB);
     }
-    private static void dfs(int depth, int idx) {
+    private static void dfs(int depth) {
         if (depth == limit) {
             StringBuilder tmp = new StringBuilder();
             for (int i: line) tmp.append(i).append(" ");
             setNums.add(tmp.toString());
             return;
         }
-        for (int i=idx; i<N; i++) {
+        for (int i=0; i<N; i++) {
             if (!visited[i]) {
                 visited[i] = true;
                 line[depth] = nums[i];
-                dfs(depth + 1, i+1);
+                dfs(depth + 1);
                 visited[i] = false;
             }
         }
