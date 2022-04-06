@@ -10,7 +10,7 @@ public class boj_11656 {
         String word = sc.nextLine();
         List<String> words = new ArrayList<>();
         // 1. 접미사 구하기
-        for (int i=0; i<word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
             words.add(word.substring(i, word.length()));
         }
         // 2. 사전순 정렬 및 출력

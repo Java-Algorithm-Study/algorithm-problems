@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
  */
 public class Boj_2193 {
     //  DP [N][2진수 표현 숫자 0,1]
-    static long DP [][] = new long [91][3]; // N 이 90까지이며, 이진수는 0,1 로 이루어져있음.
+    static long DP [][] = new long [91][3]; // N 이 90까지이며, 이진수는 0,1 로 이루어져있음
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
