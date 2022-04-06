@@ -5,8 +5,8 @@ import java.util.*;
 
 // 순서가 있어야하고 중복이 발생하면 안된다
 // 수정: 순서는 Arrays.sort()로 해결하므로 중복 제거&들어간대로 쌓이는 LinkedHashSet을 사용한다.
-// N과 M(10)
-public class boj_15664 {
+// N과 M(9)
+public class boj_15663 {
     private static int N, limit;
     private static int[] nums;
     private static int[] line;
@@ -28,25 +28,25 @@ public class boj_15664 {
         }
         Arrays.sort(nums);
 
-        dfs(0, 0);
+        dfs(0);
         StringBuilder answerSB = new StringBuilder();
         for (String line : setNums)
              answerSB.append(line).append("\n");
         System.out.println(answerSB);
     }
     private static StringBuilder tmp = new StringBuilder();
-    private static void dfs(int depth, int idx) {
+    private static void dfs(int depth) {
         if (depth == limit) {
             for (int i: line) tmp.append(i).append(" ");
             setNums.add(tmp.toString());
             tmp.setLength(0);
             return;
         }
-        for (int i=idx; i<N; i++) {
+        for (int i=0; i<N; i++) {
             if (!visited[i]) {
                 visited[i] = true;
                 line[depth] = nums[i];
-                dfs(depth + 1, i+1);
+                dfs(depth + 1);
                 visited[i] = false;
             }
         }
