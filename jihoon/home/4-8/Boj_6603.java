@@ -7,7 +7,7 @@ public class Boj_6603 {
     public static final int M = 6;
     public static StringBuilder sb = new StringBuilder();
     
-    public static void bfs(int n, String[] numbers, String[] arr, int at, int depth) {
+    public static void dfs(int n, String[] numbers, String[] arr, int at, int depth) {
         if (depth == M) {
             for (String s : arr) {
                 sb.append(s).append(' ');
@@ -18,7 +18,7 @@ public class Boj_6603 {
     
         for (int i = at; i < n; i++) {
             arr[depth] = numbers[i];
-            bfs(n, numbers, arr, i + 1, depth + 1);
+            dfs(n, numbers, arr, i + 1, depth + 1);
         }
     }
     
@@ -30,7 +30,7 @@ public class Boj_6603 {
             int n = Integer.parseInt(s[0]);
             String[] arr = new String[M];
             String[] numbers = Arrays.copyOfRange(s, 1, s.length);
-            bfs(n, numbers, arr, 0, 0);
+            dfs(n, numbers, arr, 0, 0);
             sb.append("\n");
         }
     

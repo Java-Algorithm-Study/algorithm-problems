@@ -10,7 +10,7 @@ public class Boj_10819 {
     public static boolean[] visit;
     public static int ans = 0;
     
-    public static void bfs(int depth) {
+    public static void dfs(int depth) {
         if (depth == N) {
             int sum = 0;
             for (int i = 1; i < arr.length; i++) {
@@ -24,7 +24,7 @@ public class Boj_10819 {
             if (!visit[i]) {
                 visit[i] = true;
                 arr[depth] = numbers[i];
-                bfs(depth + 1);
+                dfs(depth + 1);
                 visit[i] = false;
             }
         }
@@ -42,7 +42,7 @@ public class Boj_10819 {
             numbers[i] = Integer.parseInt(st.nextToken());
         }
     
-        bfs(0);
+        dfs(0);
         
         System.out.println(ans);
     }
