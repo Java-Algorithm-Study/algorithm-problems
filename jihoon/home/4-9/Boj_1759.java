@@ -10,7 +10,6 @@ public class Boj_1759 {
     public static int C;
     public static String[] s;
     public static String[] arr;
-    public static boolean[] visit;
     public static StringBuilder sb = new StringBuilder();
     public static final List<String> vowels = Arrays.asList("a", "e", "i", "o", "u");
     
@@ -23,16 +22,12 @@ public class Boj_1759 {
                 }
                 sb.append("\n");
             }
-            
             return;
         }
     
         for (int i = at; i < C; i++) {
-            if (visit[i]) continue;
-            visit[i] = true;
             arr[depth] = s[i];
-            dfs(i, depth + 1);
-            visit[i] = false;
+            dfs(i + 1, depth + 1);
         }
     }
     
@@ -52,7 +47,6 @@ public class Boj_1759 {
         C = Integer.parseInt(st.nextToken());
         s = new String[C];
         arr = new String[L];
-        visit = new boolean[C];
     
         for (int i = 0; i < C; i++) {
             s[i] = line.nextToken();
