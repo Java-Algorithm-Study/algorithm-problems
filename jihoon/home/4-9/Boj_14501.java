@@ -25,7 +25,7 @@ public class Boj_14501 {
                 continue;
             }
             
-            // 현재 뽑으려는 상담일이 퇴사 날짜보다 클 때
+            // 현재 뽑으려는 상담일이 퇴사 날짜보다 클 때 continue
             if (i + map[i][0] > N) {
                 continue;
             }
