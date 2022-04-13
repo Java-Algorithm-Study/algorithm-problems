@@ -1,7 +1,7 @@
 import java.util.*;
 import java.io.*;
-// 종이 조각
-public class boj_14391 {
+// ABCDE
+public class boj_13023 {
     static boolean[] visited;
     static int N;
     static List<Integer>[] adj;
