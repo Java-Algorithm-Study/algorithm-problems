@@ -8,6 +8,9 @@ import java.util.StringTokenizer;
 
 // 이분 그래프
 // 두 그룹으로 분할했을 시, 각 그룹 내에서 인접하면 안된다.
+// 즉 그래프 상 각 layer간 인접하면 안되므로, CHECKER를 이용해서 구분한다.
+// 인접 노드 간 같은 CHECKER라면 이분 그래프가 성립되지 않는다.
+// EX) "1": 2-3, "2": 1-3
 public class boj_1707 {
     static List<Integer>[] adj;
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -39,7 +42,7 @@ public class boj_1707 {
                     for (int adjNode: adj[node]) {    // 인접 노드들 탐색
                         if (!visited[adjNode]) {
                             que.add(adjNode); visited[adjNode] = true;  // 연결
-                            checkAdj[adjNode] = checkAdj[node] * (-1);  //
+                            checkAdj[adjNode] = checkAdj[node] * (-1);
                         } else {    // 이미 방문한 노드인 경우
                             if (checkAdj[node] == checkAdj[adjNode]) {
                                 return "NO";
