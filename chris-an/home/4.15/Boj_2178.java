@@ -16,7 +16,6 @@ class Coordinate {
 public class Boj_2178 {
     static int N, M;
     static int[][] map;
-    static boolean[][] visited;
     static int[] dx = {-1, 0, 1, 0};
     static int[] dy = {0, 1, 0, -1};
 
