@@ -7,7 +7,6 @@ public class Boj_16947 {
     private static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
     private static Set<Integer> set = new HashSet<>();
     private static StringBuilder sb = new StringBuilder();
-    private static boolean[] mainLine;
     private static int[] depths;
     private static boolean flag;
     private static boolean[] visited;
@@ -23,7 +22,6 @@ public class Boj_16947 {
             if (flag) return;
             // 간선을 타다가 순환선을 만나면 해당 역까지 거리를 리턴
             if (set.contains(x) && depths[i] - depths[x] > 1) {
-                mainLine[x] = true;
                 sb.append(depths[x] - depths[0]).append(' ');
                 flag = true;
                 return;
@@ -37,7 +35,6 @@ public class Boj_16947 {
         int N = Integer.parseInt(bf.readLine());
         visited = new boolean[N + 1];
         depths = new int[N + 1];
-        mainLine = new boolean[N + 1];
         for (int i = 0; i <= N; i++) {
             list.add(new ArrayList<>());
         }
