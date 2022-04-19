@@ -9,7 +9,6 @@ public class Boj_16964 {
     private static ArrayList<ArrayList<Integer>> list = new ArrayList<>();
     private static boolean[] visited;
     private static int[] output;
-    private static int N;
     private static boolean flag;
     private static int index = 1;
     
@@ -34,7 +33,7 @@ public class Boj_16964 {
 
     public static void main(String[] args) throws IOException {
         var bf = new BufferedReader(new InputStreamReader(System.in));
-        N = Integer.parseInt(bf.readLine());
+        int N = Integer.parseInt(bf.readLine());
         visited = new boolean[N + 1];
         output = new int[N];
     
