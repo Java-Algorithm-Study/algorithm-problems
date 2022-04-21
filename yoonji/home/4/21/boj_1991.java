@@ -27,39 +27,39 @@ public class boj_1991 {
             tree[node].add(new Node(input[1].charAt(0)-64, input[2].charAt(0)-64));
         }
         // 2. 전위, 중위, 후위 순회
-        before_search(1); sb.append("\n");
-        mid_search(1); sb.append("\n");
-        after_search(1); sb.append("\n");
+        beforeSearch(1); sb.append("\n");
+        midSearch(1); sb.append("\n");
+        afterSearch(1); sb.append("\n");
         System.out.println(sb);
     }
     // 후위 탐색
-    private static void after_search(int nodeIdx) {
+    private static void afterSearch(int nodeIdx) {
         for (Node sub : tree[nodeIdx]) {
             int l = sub.left;
             int r = sub.right;
-            if (l != -18) after_search(l);// 왼쪽 탐색
-            if (r != -18) after_search(r);// 오른쪽 탐색
+            if (l != -18) afterSearch(l);// 왼쪽 탐색
+            if (r != -18) afterSearch(r);// 오른쪽 탐색
             sb.append((char) (nodeIdx + 64));
         }
     }
     // 중위 탐색
-    private static void mid_search(int nodeIdx) {
+    private static void midSearch(int nodeIdx) {
         for (Node sub : tree[nodeIdx]) {
             int l = sub.left;
             int r = sub.right;
-            if (l != -18) mid_search(l);// 왼쪽 탐색
+            if (l != -18) midSearch(l);// 왼쪽 탐색
             sb.append((char) (nodeIdx + 64));
-            if (r != -18) mid_search(r);// 오른쪽 탐색
+            if (r != -18) midSearch(r);// 오른쪽 탐색
         }
     }
     // 전위 탐색
-    static void before_search(int nodeIdx) {
+    static void beforeSearch(int nodeIdx) {
         for (Node sub : tree[nodeIdx]) {
             int l = sub.left;
             int r = sub.right;
             sb.append((char) (nodeIdx + 64));// 먼저 탐색
-            if (l != -18) before_search(l);// 왼쪽 탐색
-            if (r != -18) before_search(r);// 오른쪽 탐색
+            if (l != -18) beforeSearch(l);// 왼쪽 탐색
+            if (r != -18) beforeSearch(r);// 오른쪽 탐색
         }
     }
 }
