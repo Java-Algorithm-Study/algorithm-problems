@@ -31,7 +31,6 @@ public class boj_2250 {
     }
 
     private static void makeTree() throws IOException{
-        // 1. 초기화
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
         tree = new ArrayList<>();
