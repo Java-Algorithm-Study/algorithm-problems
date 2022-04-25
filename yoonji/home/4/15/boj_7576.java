@@ -13,7 +13,12 @@ public class boj_7576 {
     static final int RIPE_TOMATO = 1;
     static Queue<TomatoPosition> que = new LinkedList<>();
     public static void main(String[] args) throws IOException {
-        // 1. 초기화
+        input();
+        ripeTomato_byBFS();
+        System.out.println(checkZeroAndGetDate()-1);    // 처음에 1일부터 시작했으므로
+    }
+
+    private static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine(), " ");
         w = sToI(st.nextToken());
@@ -23,17 +28,16 @@ public class boj_7576 {
             st = new StringTokenizer(br.readLine(), " ");
             for (int j=0; j<w; j++) {
                 box[i][j] = sToI(st.nextToken());
-                // 2. 익은 토마토 찾기
-                if (box[i][j] == RIPE_TOMATO)
-                    que.offer(new TomatoPosition(i, j));
+                findRipeTomato(i, j);
             }
         }
-        // 3. 토마토 익히기 (bfs)
-        ripeTomato_byBFS();
-        // 4. 안 익은 토마토 체크
-        System.out.println(checkZeroAndGetDate()-1);    // 처음에 1일부터 시작했으므로
     }
-
+    // 익은 토마토를 찾는다.
+    private static void findRipeTomato(int x, int y) {
+        if (box[x][y] == RIPE_TOMATO)
+            que.offer(new TomatoPosition(x, y));
+    }
+    // 안익은 토마토가 있는지 체크하며, 최소의 소요 기간을 찾는다.
     private static int checkZeroAndGetDate() {
         int takenDate = Integer.MIN_VALUE;
         Loop1:
@@ -48,6 +52,7 @@ public class boj_7576 {
         }
         return takenDate;
     }
+    // 토마토가 익도록 처리한다.
     private static void ripeTomato_byBFS() {
         int[][] dir = {{-1, 1, 0, 0}, {0, 0, -1, 1}};
         while (!que.isEmpty()) {
