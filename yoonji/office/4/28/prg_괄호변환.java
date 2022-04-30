@@ -7,12 +7,10 @@ public class prg_괄호변환 {
         String[] separatedP = seperate(p);
         String first = separatedP[0];
         String sec = separatedP[1];
-
         // step3. if first is VPS? sec를 다시 분리해서 수행하고, first에 대해서는 answerSB에 저장.
         if (isVps(first)) {
             answerSB.append(first);
-            // 재귀로 보낸 p의 first가 올바른 괄호 문자열이면 또 다시 그때의 sec를 재귀!
-            answerSB.append(solution(sec));   // "덧붙인다"
+            answerSB.append(solution(sec));   // 또 다시 그때의 sec를 재귀! -> "덧붙인다"
         }
         // if no? start step 4
         else {
@@ -28,17 +26,13 @@ public class prg_괄호변환 {
         return answerSB.toString();
     }
     private boolean isVps(String str) {
-        boolean isVps = true;
         int parenthesisCheck=0;
         for (int i=0; i<str.length(); i++) {
             if ('(' == str.charAt(i)) parenthesisCheck++;
             else parenthesisCheck--;
-            if (parenthesisCheck<0) {
-                isVps=false;
-                break;
-            }
+            if (parenthesisCheck<0) return false;
         }
-        return isVps;
+        return true;
     }
     private String[] seperate(String p) {
         int parenthesisCheck=0;
@@ -49,8 +43,7 @@ public class prg_괄호변환 {
             else parenthesisCheck--;
             if (parenthesisCheck==0) {
                 first = p.substring(0, i+1);
-                if (p.length() == i+1) sec="";
-                else sec = p.substring(i+1, p.length());
+                sec = p.substring(i+1); // i+1이 length이면 자동으로 빈 문자열
                 break;
             }
         }
@@ -61,7 +54,6 @@ public class prg_괄호변환 {
         String solution = t.solution("(()())()");
         String solution1 = t.solution(")(");
         String solution2 = t.solution("()))((()");
-
         System.out.println(solution);
         System.out.println(solution1);
         System.out.println(solution2);
