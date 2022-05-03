@@ -38,7 +38,6 @@ public class Boj_1339 {
             visited[i] = true;
             arr[depth] = i;
             dfs(depth + 1);
-            arr[depth] = 0;
             visited[i] = false;
         }
     }
