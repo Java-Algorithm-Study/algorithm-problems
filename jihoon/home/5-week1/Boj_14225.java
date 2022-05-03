@@ -6,23 +6,18 @@ import java.util.*;
 public class Boj_14225 {
     private static int N;
     private static int[] sequence;
-    private static ArrayList<Integer> temp = new ArrayList<>();
     private static Set<Integer> set = new HashSet<>();
     
-    public static void dfs(int start, int depth) {
+    public static void dfs(int start, int depth, int sum) {
         
         if (depth > 0) {
-            int sum = 0;
-            for (int n : temp) {
-                sum += n;
-            }
             set.add(sum);
         }
         
         for (int i = start; i < N; i++) {
-            temp.add(sequence[i]);
-            dfs(i + 1, depth + 1);
-            temp.remove(temp.size() - 1);
+            sum += sequence[i];
+            dfs(i + 1, depth + 1, sum);
+            sum -= sequence[i];
         }
     }
     
@@ -34,7 +29,7 @@ public class Boj_14225 {
         for (int i = 0; i < N; i++) {
             sequence[i] = Integer.parseInt(st.nextToken());
         }
-        dfs(0, 0);
+        dfs(0, 0, 0);
     
         int ans = 1;
         while (set.contains(ans)) {
