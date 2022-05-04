@@ -9,28 +9,27 @@ public class prg_거리두기확인하기 {
 
     public static int[] solution(String[][] places) {
         int[] answer = new int[5];
-        for (String[] room : places) {
+        for (int i=0; i<5; i++) {
+            String[] room = places[i];
+            boolean isThereP = false;
             Loop1:
             for (int r = 0; r < 5; r++) {
                 // 거리두기 확인하기
-                boolean isThereP = false;
                 for (int c = 0; c < 5; c++) {
                     if (room[r].charAt(c) == PEOPLE) {
                         isThereP = true;
-                        answer[r] = bfs(room, r, c);
-                        if (answer[r] == 0) break Loop1;
+                        answer[i] = bfs(room, r, c);
+                        if (answer[i] == 0) break Loop1;
                     }
                 }
-                if (!isThereP) answer[r] = 1;
+                if (!isThereP) answer[i] = 1;
             }
         }
         return answer;
     }
-
     private static int bfs(String[] room, int x, int y) {
         xyQue.offer(x);
         xyQue.offer(y);
-
         while(!xyQue.isEmpty()) {
             int nowX = xyQue.poll();
             int nowY = xyQue.poll();
