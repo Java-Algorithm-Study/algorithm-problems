@@ -5,7 +5,6 @@ import java.util.*;
 
 // 부분수열의 합
 public class boj_14225_03 {
-    static boolean[] visited;
     static boolean[] isSubsequence;
     static int[] S;
     public static void main(String[] args) throws IOException {
@@ -20,7 +19,6 @@ public class boj_14225_03 {
             totalSum += S[i];// 모든 원소의 합 (for visited 길이)
         }
         isSubsequence = new boolean[totalSum + 2];
-        visited = new boolean[S.length];
         // 2. 자릿수만큼 dfs호출
         for (int i = 1; i <= N; i++) {
             dfs(0, i, 0, 0);
@@ -35,13 +33,9 @@ public class boj_14225_03 {
         }
 //        if (idx >= S.length) return;
         for (int i=idx; i<S.length; i++) {
-            if (!visited[i]) {
                 sum+= S[i];
-                visited[i]= true;
                 dfs(depth+1, limit, i+1, sum);
                 sum-= S[i];
-                visited[i] = false;
-            }
         }
     }
     private static void findMinNum(int totalSum) {
