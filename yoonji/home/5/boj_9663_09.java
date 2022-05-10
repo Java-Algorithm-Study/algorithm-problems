@@ -17,9 +17,6 @@ public class boj_9663_09 {
         Scanner sc = new Scanner(System.in);
         N = sc.nextInt();
         board = new int[N];
-        // 퀸을 놓고 두면 안되는 곳을 모두 true 처리 한다.
-        // 그 다음 퀸을 놓는데, true처리가 안된 곳 + 범위를 벗어나지 않는 곳에 놓아야 한다.
-        // 이것을 N번 두면 경우의수+1이 된다.
         checkQueen(0);
         System.out.print(answer);
     }
@@ -34,8 +31,6 @@ public class boj_9663_09 {
             if (isPossible(row)) checkQueen(row+1); // 현재 행 전달
         }
     }
-// 행이 row, 열이 col
-    // index가 열, 값이 행
     private static boolean isPossible(int row) {
         for (int i=0; i<row; i++) {
             if (board[row]== board[i]) return false;
