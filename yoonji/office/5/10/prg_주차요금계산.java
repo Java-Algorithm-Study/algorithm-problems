@@ -46,7 +46,7 @@ public class prg_주차요금계산 {
         for (int car : parkings.keySet()) {
             ParkingInfo p = parkings.get(car);
             if (p.isIN) {
-                p.totalTime += calculateTime(p.hourOfLastINTime, p.minuteOfLastINTime, 23, 59);// 23:59에서 뺀 누적 시간
+                p.totalTime += calculateTime(p.hourOfLastINTime, p.minuteOfLastINTime, 23, 59);// 마지막 시간 추가 정산
                 p.isIN = false;
             }
             // 계산 부과!
@@ -66,18 +66,33 @@ public class prg_주차요금계산 {
         return answer;
     }
 
+    /**
+     * 입차 시간과 출차 시간을 비교하여 주차 시간을 계산합니다.
+     * @param h1
+     * @param m1
+     * @param h2
+     * @param m2
+     * @return
+     */
     private long calculateTime(int h1, int m1, int h2, int m2) {
         int hour = h2-h1;
         int minute = 0;
         if (m2==0 && hour==1) hour = 0;
         if (m1>m2) {
             minute = 60-m1 + m2;
-            hour--;
+            if (hour!=0) hour--;    // 추가.
         }
         else minute = m2-m1;
         return hour * 60 + minute;
     }
 
+    /**
+     * 추가요금을 계산합니다.
+     * @param overTime
+     * @param unitTime
+     * @param unitFee
+     * @return
+     */
     private long calculateOverFee(long overTime, int unitTime, int unitFee) {
         if ((double)overTime % unitTime != 0) {
             overTime = overTime / unitTime +1;
@@ -87,6 +102,14 @@ public class prg_주차요금계산 {
         }
         return overTime * unitFee;
     }
+
+    /**
+     * ParkingInfo 클래스의 인스턴스 상태를 변경합니다.
+     * @param p
+     * @param hour
+     * @param minute
+     * @param inOut
+     */
     private void checkParkingCarInfo(ParkingInfo p, int hour, int minute, String inOut) {
         System.out.println(p.hourOfLastINTime);
         if ("IN".equals(inOut)) {
