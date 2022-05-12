@@ -4,13 +4,12 @@ import java.io.InputStreamReader;
 public class swExpert_1859_12 {
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int T;
-        T= br.read();
+        int T= Integer.parseInt(br.readLine());
 
-        for(int test_case = 1; test_case <= T; test_case++) {
-            int N = br.read();
+        for(int TC = 1; TC <= T; TC++) {
+            int N = Integer.parseInt(br.readLine());
             int[] price = new int[N];
-            int sum = 0;
+            long sum = 0;   // N의 크기 주의..
             String[] tmp = br.readLine().split(" ");
 
             for (int i=0; i<tmp.length;i++) {
@@ -21,7 +20,7 @@ public class swExpert_1859_12 {
                 if (price[i] > max) max = price[i];
                 else if (price[i] < max) sum += max - price[i];
             }
-            System.out.println("#"+test_case+" "+sum);
+            System.out.println("#"+TC+" "+sum);
         }
     }
 }
