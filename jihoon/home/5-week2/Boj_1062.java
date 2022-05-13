@@ -34,8 +34,7 @@ public class Boj_1062 {
     
     public static void countWords(List<Character> combinations) {
         int count = 0;
-        for (int i = 0; i < words.length; i++) {
-            String word = words[i];
+        for (String word : words) {
             boolean flag = true;
             for (int j = 4; j < word.length() - 4; j++) {
                 char current = word.charAt(j);
