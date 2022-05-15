@@ -17,9 +17,7 @@ public class sw_5948_14 {
             for (int i=0; i<7; i++) {
                 num[i] = Integer.parseInt(st.nextToken());
             }
-            for (int i=0; i<5; i++) {
-                dfs(0, 0, i);
-            }
+            dfs(0,0,0);
             // 2. 내림차순 sort
             sums.sort(Collections.reverseOrder());
             bw.write("#" + t + " " + sums.get(4));bw.newLine();
@@ -34,7 +32,7 @@ public class sw_5948_14 {
             return;
         }
         for (int i=idx; i<7; i++) {
-            dfs(sum+num[idx], depth+1, i+1);
+            dfs(sum+num[i], depth+1, i+1);
         }
     }
 }
