@@ -7,8 +7,6 @@ public class Boj_12100 {
     static int N;
     static int max = Integer.MIN_VALUE;
     static int[][] board;
-    static int[] dx = {-1, 0, 1, 0};
-    static int[] dy = {0, 1, 0, -1};
     static final int fourDirection = 4;
 
     static void dfs(int depth, int[][] board) {
