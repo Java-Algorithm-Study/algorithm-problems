@@ -22,16 +22,16 @@ public class sw_6485_16 {
             for (int i=0; i<busStopNum; i++) {
                 busStop[i] = strToInt(br.readLine());
             }
-            int[] answer = new int[5001];
+            int[] answer = new int[busStopNum];
             for (int i=0; i<N; i++) {
                 int start = busLine[i][0];
                 int end = busLine[i][1];
-                for (int j=start; j<=end; j++) {
-                    answer[j]++;
+                for (int p=0; p<busStopNum; p++) {
+                    if (start<=busStop[p] && busStop[p]<=end) answer[p]++;
                 }
             }
             StringBuilder sb = new StringBuilder();
-            for (int i=0; i<busStopNum; i++) sb.append(answer[busStop[i]]).append(" ");
+            for (int i=0; i<busStopNum; i++) sb.append(answer[i]).append(" ");
             System.out.print("#"+ tc + " " + sb);
         }
     }
