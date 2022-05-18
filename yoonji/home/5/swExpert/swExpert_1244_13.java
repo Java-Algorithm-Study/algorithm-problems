@@ -61,7 +61,7 @@ public class swExpert_1244_13 {
 //            str = "";
 //            Arrays.stream(nums).forEach(n -> str += String.valueOf(n));
             String str = Arrays.toString(nums).replaceAll("[^0-9]",""); // int[] -> String
-
+            System.out.println(str);
             maxMoney = Math.max(maxMoney, Integer.parseInt(str));
             return;
         }

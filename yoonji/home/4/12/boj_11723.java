@@ -21,10 +21,10 @@ public class boj_11723 {
                     set.add(num);
                     break;
                 case "remove" :
-                    set.remove(num);    // if (set.contains(num))
+                    set.remove(num);
                     break;
                 case "toggle" :
-                    if (!set.remove(num)) set.add(num); // 있으면 제거, 없으면 추가
+                    if (!set.remove(num)) set.add(num);
                     break;
                 case "all" :
                     set = new HashSet<>();
