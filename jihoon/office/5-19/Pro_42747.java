@@ -1,5 +1,5 @@
 import java.util.Arrays;
-
+// H-index
 public class Pro_42747 {
     public static int solution(int[] citations) {
         Arrays.sort(citations);

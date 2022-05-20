@@ -9,7 +9,6 @@ public class Boj_2178 {
     private static int N;
     private static int M;
     private static int[][] map;
-    private static boolean[] visited;
     static int[] dx = {0, 0, 1, -1};
     static int[] dy = {1, -1, 0, 0};
     
@@ -64,7 +63,7 @@ public class Boj_2178 {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
         map = new int[N][M];
-        visited = new boolean[N * M];
+
         for (int i = 0; i < N; i++) {
             String[] line = bf.readLine().split("");
             for (int j = 0; j < M; j++) {

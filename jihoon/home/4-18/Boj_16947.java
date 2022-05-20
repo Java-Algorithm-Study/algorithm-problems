@@ -22,7 +22,7 @@ public class Boj_16947 {
             if (flag) return;
             // 간선을 타다가 순환선을 만나면 해당 역까지 거리를 리턴
             if (set.contains(x) && depths[i] - depths[x] > 1) {
-                sb.append(depths[x] - depths[0]).append(' ');
+                sb.append(depths[x]).append(' ');
                 flag = true;
                 return;
             }

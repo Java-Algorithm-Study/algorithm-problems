@@ -12,7 +12,7 @@ public class Boj_1260 {
     public static void dfs(int i) {
         visit[i] = true;
         sb.append(i).append(' ');
-        for (int j = 1; j < N + 1; j++) {
+        for (int j = 1; j <= N; j++) {
             if (map[i][j] == 1 && !visit[j]) {
                 dfs(j);
             }
@@ -43,10 +43,6 @@ public class Boj_1260 {
         int V = Integer.parseInt(st.nextToken());
         map = new int[N + 1][N + 1];
         visit = new boolean[N + 1];
-        
-        for (int j = 0; j <= N; j++) {
-            Arrays.fill(map[j], 0);
-        }
         
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(bf.readLine());

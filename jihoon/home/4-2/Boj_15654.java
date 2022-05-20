@@ -12,7 +12,7 @@ public class Boj_15654 {
     private static boolean[] visit;
     private static StringBuilder sb = new StringBuilder();
     
-    public static void bfs(int depth) {
+    public static void dfs(int depth) {
         if (depth == M) {
             for (int i = 0; i < M; i++) {
                 sb.append(arr[i]).append(' ');
@@ -25,7 +25,7 @@ public class Boj_15654 {
             if (!visit[i]) {
                 visit[i] = true;
                 arr[depth] = numbers[i];
-                bfs(depth + 1);
+                dfs(depth + 1);
                 visit[i] = false;
             }
         }
@@ -47,7 +47,7 @@ public class Boj_15654 {
         }
         Arrays.sort(numbers);
         
-        bfs(0);
+        dfs(0);
     
         System.out.println(sb);
     }

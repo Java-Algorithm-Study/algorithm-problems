@@ -5,10 +5,12 @@ import java.util.StringTokenizer;
 
 public class Boj_15652 {
     
+    public static int N;
+    public static int M;
     public static int[] arr;
     public static StringBuilder sb = new StringBuilder();
     
-    public static void dfs(int N, int M, int depth, int at) {
+    public static void dfs(int at, int depth) {
         if (depth == M) {
             for (int val : arr) {
                 sb.append(val).append(' ');
@@ -19,7 +21,7 @@ public class Boj_15652 {
         
         for (int i = at; i < N; i++) {
             arr[depth] = i + 1;
-            dfs(N, M, depth + 1, i);
+            dfs(i, depth + 1);
         }
     }
     
@@ -29,11 +31,11 @@ public class Boj_15652 {
         
         StringTokenizer st = new StringTokenizer(br.readLine());
         
-        int N = Integer.parseInt(st.nextToken());
-        int M = Integer.parseInt(st.nextToken());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
         
         arr = new int[M];
-        dfs(N, M, 0, 0);
+        dfs(0, 0);
         System.out.println(sb);
         
     }

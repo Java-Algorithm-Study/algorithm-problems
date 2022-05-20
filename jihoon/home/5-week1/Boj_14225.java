@@ -6,12 +6,14 @@ import java.util.*;
 public class Boj_14225 {
     private static int N;
     private static int[] sequence;
-    private static Set<Integer> set = new HashSet<>();
+//    private static Set<Integer> set = new HashSet<>();
+    private static boolean[] nums = new boolean[2_000_000];
     
     public static void dfs(int start, int depth, int sum) {
         
         if (depth > 0) {
-            set.add(sum);
+//            set.add(sum);
+            nums[sum] = true;
         }
         
         for (int i = start; i < N; i++) {
@@ -32,7 +34,7 @@ public class Boj_14225 {
         dfs(0, 0, 0);
     
         int ans = 1;
-        while (set.contains(ans)) {
+        while (nums[ans]) {
             ans++;
         }
         System.out.println(ans);
