@@ -6,6 +6,11 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 // 트리의 높이와 너비
+/**
+ 트리 문제라면 고려할 점
+ 1. Node 클래스가 필요할 지 고민하고, 중위/전위/후위순회가 필요할 수 있음을 생각한다.
+ 2. 루트 노드가 정해져있는지도 체크하자. (루트 노드가 항상 1이 아니라면 루트 노드를 찾을 필요가 있을 가능성 존재)
+ */
 public class boj_2250 {
     static int N;
     static List<Node> tree;

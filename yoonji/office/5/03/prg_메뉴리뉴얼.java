@@ -1,5 +1,7 @@
 import java.util.*;
-
+// 1. course만큼 돌면서, 사이즈가 course보다 큰 order에 대해서 조합을 찾는다.
+// 2. 해당 단위에 대해 조합을 찾으면서 HashMap에 횟수와 함께 기록한다.
+// 3. course만큼 돌면서, HashMap에서 course에 해당하는 key들중 가장 많이 주문된 횟수값을 얻어서, value가 max인 key들을 answer에 추가한다.
 public class prg_메뉴리뉴얼 {
     private HashMap<String, Integer> menus = new HashMap<>();
     public String[] solution(String[] orders, int[] course) {
