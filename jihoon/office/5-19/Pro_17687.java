@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+// n진수 게임
 
 public class Pro_17687 {
     private static ArrayList<Integer> arrayList = new ArrayList<>();

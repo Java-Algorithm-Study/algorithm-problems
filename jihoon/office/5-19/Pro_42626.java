@@ -1,5 +1,5 @@
 import java.util.PriorityQueue;
-
+// 프로그래머스 더맵게
 public class Pro_42626 {
     public static int solution(int[] scoville, int K) {
         

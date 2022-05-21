@@ -1,3 +1,5 @@
+// 이진변환 반복하기
+
 public class Pro_70129 {
     
     public static int[] solution(String s) {

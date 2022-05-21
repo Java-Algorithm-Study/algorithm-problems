@@ -20,8 +20,8 @@ public class Boj_1748 {
         for (int i = 1; i < index - 1; i++) {
             ans += make9(i) * i;
         }
+        
         int k = (int) Math.pow(10, index - 2);
-    
         ans += (n - k + 1) * (index - 1);
         return ans;
     }
@@ -41,6 +41,7 @@ public class Boj_1748 {
 
         int answer = solution(N);
         System.out.println(answer);
+        bf.close();
         
     }
 }
