@@ -6,20 +6,6 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 // 숫자조작
-/* whiteboard
- 0~99999999까지의 정수 N (long)
- 숫자 한쌍을 골라서 자리를 0번,1번 바꾼 새 수 M (맨 앞은 0이 되면 안된다.)
- 최솟값, 최댓값을 구해라.
- 최댓값은 가장 큰값이 0번째가 아니면 바꾸면 끝.
-     이미 가장 큰값이 0번 째이면 두번째 큰 값을 찾는다. 두번째 큰값도 이미 두번째 자리면 세번째.. ex) 52431 -> 54231
- 최솟값은 가장 작은 값이 0번째이면, (작은 값을 찾을 때 0은 제외한다.)
-     그다음 작은 값을 두번째 자리와 바꾼다.
-
- 조건1. 0은 바꿀 수 없다.
- 조건2. 큰값과 작은 값을
- 199 -> 991 최댓값이 같다면, 가장 뒤에 있는 최댓값으로
- 919 -> 첫번째가 이미 최댓값이면, 두번째 값과 최댓값을 바꾼다.
- */
 public class sw_13428_20 {
     static char[] charArr;
     public static void main(String[] args) throws IOException {
@@ -77,8 +63,6 @@ public class sw_13428_20 {
 
         // 교환
         // 첫번째 값보다 작은 min이 없으면 교환X
-        // 12142 -> 11242
-        // 12324 -> 13224 -> 12234
         for (int i=0; i<arr.length; i++) {
             if (arr[i]  > min && minIdx != i) {    //11000 -> 12000
                 int tmp = arr[i];
