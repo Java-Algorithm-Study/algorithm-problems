@@ -21,7 +21,7 @@ public class Boj_10026 {
         }
     }
     
-    public static void rgbBfs(int x, int y) {
+    public static void bfs(int x, int y) {
         Queue<Node> q = new LinkedList<>();
         q.offer(new Node(x, y));
         visited[x][y] = true;
@@ -37,29 +37,6 @@ public class Boj_10026 {
                 if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
                 if (visited[nx][ny]) continue;
                 if (board[x][y] == board[nx][ny]) {
-                    q.offer(new Node(nx, ny));
-                    visited[nx][ny] = true;
-                }
-            }
-        }
-    }
-    
-    public static void rbBfs(int x, int y) {
-        Queue<Node> q = new LinkedList<>();
-        q.offer(new Node(x, y));
-        visited[x][y] = true;
-        
-        while (!q.isEmpty()) {
-            Node current = q.poll();
-            x = current.x;
-            y = current.y;
-            
-            for (int i = 0; i < 4; i++) {
-                int nx = x + dx[i];
-                int ny = y + dy[i];
-                if (nx < 0 || nx >= N || ny < 0 || ny >= N) continue;
-                if (visited[nx][ny]) continue;
-                if (board[x][y] == board[nx][ny] || (board[x][y] == 'R' && board[nx][ny] == 'G') || (board[x][y] == 'G' && board[nx][ny] == 'R')) {
                     q.offer(new Node(nx, ny));
                     visited[nx][ny] = true;
                 }
@@ -85,9 +62,15 @@ public class Boj_10026 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (!visited[i][j]) {
-                    rgbBfs(i, j);
+                    bfs(i, j);
                     rgbCount++;
                 }
+            }
+        }
+    
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (board[i][j] == 'G') board[i][j] = 'R';
             }
         }
         
@@ -96,7 +79,7 @@ public class Boj_10026 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
                 if (!visited[i][j]) {
-                    rbBfs(i, j);
+                    bfs(i, j);
                     rbCount++;
                 }
             }
