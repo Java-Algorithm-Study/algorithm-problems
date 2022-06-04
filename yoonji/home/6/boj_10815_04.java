@@ -16,9 +16,7 @@ public class boj_10815_04 {
         st = new StringTokenizer(br.readLine(), " ");
         for (int i=0; i<M; i++) {
             int num = Integer.parseInt(st.nextToken());
-            if (numsContainsCheck(nums, num)) sb.append(1);
-            else sb.append(0);
-            sb.append(" ");
+            sb.append(numsContainsCheck(nums, num) ? 1:0).append(" ");
         }
         System.out.println(sb);
     }
@@ -27,14 +25,9 @@ public class boj_10815_04 {
         int end = nums.length-1;
         while (end >= start) {
             int mid = (start+end) / 2;
-            if (num == nums[mid]) {
-                return true;
-            }
-            else if (num < nums[mid]) {
-                end = mid-1;
-            } else {
-                start = mid+1;
-            }
+            if (num == nums[mid]) return true;
+            else if (num < nums[mid]) end = mid-1;
+            else start = mid+1;
         }
         return false;
     }
