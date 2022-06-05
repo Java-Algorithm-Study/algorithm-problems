@@ -16,19 +16,19 @@ public class boj_10815_04 {
         st = new StringTokenizer(br.readLine(), " ");
         for (int i=0; i<M; i++) {
             int num = Integer.parseInt(st.nextToken());
-            sb.append(numsContainsCheck(nums, num) ? 1:0).append(" ");
+            sb.append(numContainsCheckAndGetAnswer(nums, num)).append(" ");
         }
         System.out.println(sb);
     }
-    public static boolean numsContainsCheck(int[] nums, int num) {
+    public static int numContainsCheckAndGetAnswer(int[] nums, int num) {
         int start = 0;
         int end = nums.length-1;
         while (end >= start) {
             int mid = (start+end) / 2;
-            if (num == nums[mid]) return true;
+            if (num == nums[mid]) return 1;
             else if (num < nums[mid]) end = mid-1;
             else start = mid+1;
         }
-        return false;
+        return 0;
     }
 }
