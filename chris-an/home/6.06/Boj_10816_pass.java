@@ -24,9 +24,9 @@ public class Boj_10816_pass {
         for (int i = 0; i < M; i++) {
             int lowIdx = lowerBound(keyArr[i], 0, numberCardArr.length, numberCardArr);
             int highIdx = upperBound(keyArr[i], 0, numberCardArr.length, numberCardArr);
+
             sb.append(highIdx - lowIdx).append(' ');
         }
-
         System.out.println(sb);
     }
 
