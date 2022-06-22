@@ -29,7 +29,7 @@ public class Pro92342 {
 
     public static int[] solution(int n, int[] info) {
         result = new int[n];
-        ans = new int[11];
+        ans = new int[] {-1};
         combination(n,0, 0, info);
         return ans;
     }
