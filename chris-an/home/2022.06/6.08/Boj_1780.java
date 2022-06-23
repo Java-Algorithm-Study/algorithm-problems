@@ -20,7 +20,6 @@ public class Boj_1780 {
             for (int j = 0; j < N; j++)
                 board[i][j] = Integer.parseInt(st.nextToken());
         }
-        // 재귀를 하면서 탐색도 병행 해야할 거 같음....
         recursiveBoard(N, 0, 0);
 
         int[] printData = new int[3];

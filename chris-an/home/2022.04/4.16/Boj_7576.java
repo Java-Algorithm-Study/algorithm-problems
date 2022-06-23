@@ -15,13 +15,13 @@ import java.util.StringTokenizer;
     정수 -1은 토마토가 들어있지 않은 칸을 나타낸다.
  */
 
-class Coordinate {
-    int x, y;
-    Coordinate(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
+//class Coordinate {
+//    int x, y;
+//    Coordinate(int x, int y) {
+//        this.x = x;
+//        this.y = y;
+//    }
+//}
 
 public class Boj_7576 {
 
