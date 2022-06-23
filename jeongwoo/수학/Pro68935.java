@@ -5,7 +5,7 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/68935
  */
 
-class Solution
+public class Pro68935 {
     public int solution(int n) {
         int answer = 0;
         // n -> 3진법
@@ -17,7 +17,7 @@ class Solution
         // 3진법 -> 10진법
         for (int i=0; i< arr.size(); i++) {
             answer += arr.get(i) * Math.pow(3, arr.size() - i - 1);
-        }        
+        }
         return answer;
     }
 }
