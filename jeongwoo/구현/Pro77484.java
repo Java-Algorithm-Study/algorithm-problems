@@ -5,7 +5,7 @@ import java.util.*;
  * https://programmers.co.kr/learn/courses/30/lessons/77484
  */
 
-class Solution {
+public class Pro77484 {
         public int[] solution(int[] lottos, int[] win_nums) {
         int cnt = 0;
         int zeroCnt = 0;
