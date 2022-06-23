@@ -1,4 +1,14 @@
-class Solution {        
+/**
+ * [72410] 신규 아이디 추천
+ * https://programmers.co.kr/learn/courses/30/lessons/72410
+ */
+
+public class Pro72410 {
+    public static void main(String[] args) {
+        String input = "...!@BaT#*..y.abcdefghijklm";
+        System.out.println(solution(input));
+    }
+
     public static String solution(String new_id) {
         StringBuilder sb = new StringBuilder();
 
@@ -17,17 +27,17 @@ class Solution {
         while(sb.indexOf("..") >= 0) {
             sb.deleteCharAt(sb.indexOf(".."));
         }
-        
+
         // 4단계 new_id에서 마침표(.)가 처음이나 끝에 위치한다면 제거합니다.
         String str = sb.toString();
         if(str.charAt(0) == '.') {
             str = str.substring(1);
         }
-        
+
         if(str.length() >= 1 && str.charAt(str.length()-1) == '.') {
             str = str.substring(0, str.length()-1);
         }
-        
+
         // 5단계 new_id가 빈 문자열이라면, new_id에 "a"를 대입합니다.
         if(str.length() == 0) {
             str = "a";
@@ -41,16 +51,14 @@ class Solution {
                 str = str.substring(0, str.length()-1);
             }
         }
-        
+
         // 7단계 new_id의 길이가 2자 이하라면, new_id의 마지막 문자를 new_id의 길이가 3이 될 때까지 반복해서 끝에 붙입니다.
         if(str.length() <= 2) {
             while (str.length() < 3) {
                 str += str.charAt(str.length()-1);
             }
         }
-        
+
         return str;
-        
     }
-    
 }
