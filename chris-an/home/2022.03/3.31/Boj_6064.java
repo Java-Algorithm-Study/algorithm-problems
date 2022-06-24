@@ -29,14 +29,13 @@ public class Boj_6064 {
             int x = Integer.parseInt(st.nextToken());
             int y = Integer.parseInt(st.nextToken());
 
-            int year = x % (M + 1); // x와 M이 같을 때는 cnt 0이 아닌, x와 같아야하기 때문에, 맨 처음 값을 이런식으로 초기화 시켜줍니다.
-            int tmp = x; // 초기에 x를 고정
+            int year = x;
+
             int checkPoint = N; // 루프 길이를 x 고정을 통해 y를 찾으니, y 길이로 세팅을해줍니다.
             while (checkPoint-- > 0) {
-                int target = tmp % N == 0 ? N : tmp % N; // tmp 에 연산처리해주다가, N으로 나누었을 시 나온 값이 y 값일 경우를 찾음.
+                int target = year % N == 0 ? N : year % N; // tmp 에 연산처리해주다가, N으로 나누었을 시 나온 값이 y 값일 경우를 찾음.
                 if (target == y) break; // y를 찾았다면 return
 
-                tmp = target + M; // tmp 연산처리 매 루프 시, M을 더해줍니다.
                 year += M; // 매 로프마다 기준이 M이니 year 에 M을 추가
             }
 

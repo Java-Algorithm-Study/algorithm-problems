@@ -28,7 +28,6 @@ public class Boj_2178 {
         M = Integer.parseInt(st.nextToken());
 
         map = new int[N][M];
-        visited = new boolean[N][M];
         for (int i = 0; i < N; i++) {
             String line = br.readLine();
             for (int j = 0; j < M; j++) {

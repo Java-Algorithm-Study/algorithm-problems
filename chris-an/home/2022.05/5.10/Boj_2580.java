@@ -15,7 +15,6 @@ public class Boj_2580 {
             }
             sb.append("\n");
         }
-
         System.out.println(sb);
     }
 
