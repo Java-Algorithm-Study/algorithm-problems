@@ -1,4 +1,4 @@
-package Implement.String;
+package Implementation.String;
 import java.util.*;
 
 // 유일성 + 최소성
@@ -65,10 +65,10 @@ public class prg_후보키 {
                 // 03, 023 불가능.   13, 023 가능  (size가 작은 후보키가 큰 후보키에 완전 포함되는 경우만 최소성을 위반한 것.
             /*boolean isContains = true;
             Arrays.sort(idxArr);
-            String idxStr = Arrays.toString(idxArr).replaceAll("[^0-9]", "");
-            for (String candidateKey : columnsOfCandidate) {
+            Implementation.String idxStr = Arrays.toString(idxArr).replaceAll("[^0-9]", "");
+            for (Implementation.String candidateKey : columnsOfCandidate) {
                 System.out.println("====");
-                String sortedKey = Stream.of(candidateKey.split(""))
+                Implementation.String sortedKey = Stream.of(candidateKey.split(""))
                         .sorted()
                         .collect(Collectors.joining());
                 System.out.println("기존키: "+sortedKey+ ", 새로운 키: "+idxStr);
@@ -90,18 +90,18 @@ public class prg_후보키 {
             return;*/
         }
 
-           /* List<String> newCandidate = List.of(idxStr);
+           /* List<Implementation.String> newCandidate = List.of(idxStr);
             System.out.println("새 후보키");
-            for (String s: newCandidate) System.out.print(s+",");
+            for (Implementation.String s: newCandidate) System.out.print(s+",");
             System.out.println();
             System.out.println("기존 후보키");
-            for (String s: columnsOfCandidate) System.out.print(s+",");
+            for (Implementation.String s: columnsOfCandidate) System.out.print(s+",");
             System.out.println("====");*/
 
-            /*List<String> removedKey = new ArrayList<>();
-            for (String candidateKey : columnsOfCandidate) {
-                String longKey = candidateKey.length() < columnSize? idxStr: candidateKey;
-                String shortKey = candidateKey.length() > columnSize? idxStr: candidateKey;
+            /*List<Implementation.String> removedKey = new ArrayList<>();
+            for (Implementation.String candidateKey : columnsOfCandidate) {
+                Implementation.String longKey = candidateKey.length() < columnSize? idxStr: candidateKey;
+                Implementation.String shortKey = candidateKey.length() > columnSize? idxStr: candidateKey;
                 for (int i=0; i<shortKey.length(); i++) {
                     if (!longKey.contains(shortKey.charAt(i)+""))
                         isContains = false;
@@ -120,8 +120,8 @@ public class prg_후보키 {
 
 
             /*    for (int idx : idxArr) {
-                    for (String candidateKey : columnsOfCandidate) {
-                        if (String.valueOf(idx).equals(candidateKey)) break;
+                    for (Implementation.String candidateKey : columnsOfCandidate) {
+                        if (Implementation.String.valueOf(idx).equals(candidateKey)) break;
                         else isContains = false;
                     }
                     isContains = true;
