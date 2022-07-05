@@ -19,8 +19,6 @@
 
 ❗ 문제 확인하기  
 
-
-- 풀 문제 확인 : [Google SpreadSheet](https://docs.google.com/spreadsheets/d/1RxnnA7e-4uVIxxs-MBGXKJGQbVVeh4qFAQaPwTLo214/edit?usp=sharing)  
 - 풀 문제 확인 : [Notion Link](https://www.notion.so/da1ea8852429431caceeaa54874d87bf)  
 
 ---
