@@ -1,10 +1,5 @@
 package Implementation;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 // dfs 돌면서 경우의 수를 채워나가는데
 // 만약 조건에 해당하는 프렌즈들이 true체크되어있으면 조건을 매번 체크해준다.
 // data를 돌면서 조건에 대해 처리해준다.  <data의 0번째(key), 클래스 -> 상대방(2번째), 거리(4번쨰), 초과|미만|같음(3번쨰)>
@@ -15,10 +10,12 @@ import java.util.Map;
 // - 새 방식
 // 일단 dfs를 돌면서 8칸을 다 채우면,
 // 그렇게 만들어진 case가 조건에 일치하는지 체크한다.
+// - 기억
+// 1. switch case에서는 return하더라도 break를 해야한다.
+// 2. visited는 인자로 줘도, 전역변수로 둬도 된다.
+// 3. 정수인 char를 '0'로 빼면 int 타입 정수가 된다.
 public class prg_단체사진찍기 {
     int answer = 0;
-    // String[] FRIENDS = {"A", "C", "F", "J", "M", "N", "R", "T"};
-
     char[] FRIENDS = new char[]{'A', 'C', 'F', 'J', 'M', 'N', 'R', 'T'};
     public int solution(int n, String[] data) {
         String[] copiedData = data.clone();
