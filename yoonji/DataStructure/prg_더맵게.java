@@ -16,7 +16,7 @@ import java.util.*;
 //   - 오른쪽 자식노드 : index*2+1
 //   - 자식이 더 작으면 change
 // 2. 그렇게 끝까지 비교해서 heapify 완성
-// scovile 지수는 1,2 번째만 보면 됨 
+// scovile 지수는 1,2 번째만 보면 됨
 public class prg_더맵게 {
     public int solution(int[] scoville, int K) {
         PriorityQueue<Integer> pq = new PriorityQueue<>();
@@ -25,17 +25,17 @@ public class prg_더맵게 {
         }
         int answer = 0;
         // 스코빌 지수 체크
-        int min = pq.poll();
-        while (min < K) {
+        int min = pq.peek();
+        while (pq.peek() < K) {
+            min = pq.poll();
             int secMin = pq.poll();
             int newScov = min + (secMin * 2);
             pq.offer(newScov);
             answer++;
             if (pq.size() == 1) {
-                if (pq.poll() <K) return -1;
+                if (pq.peek() < K) return -1;
                 else break;
             }
-            min = pq.poll();
         }
         return answer;
     }
