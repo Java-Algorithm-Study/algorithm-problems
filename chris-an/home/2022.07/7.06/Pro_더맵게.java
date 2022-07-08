@@ -18,10 +18,13 @@ public class Pro_더맵게 {
                 int mixScoville = leastSpicy + (secondLeastSpicy*2);
 
                 pq.add(mixScoville);
+
+
                 answer++;
             }
         }
-        if (pq.size() == 1 && pq.peek() > K) return answer;
+        if (pq.size() == 1 && pq.peek() > K)
+            return answer;
 
         return -1;
     }
