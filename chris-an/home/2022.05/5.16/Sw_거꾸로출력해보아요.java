@@ -1,5 +1,3 @@
-package diff1;
-
 import java.util.Scanner;
 
 public class Sw_거꾸로출력해보아요 {

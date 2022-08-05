@@ -1,5 +1,3 @@
-package diff1;
-
 import java.util.Scanner;
 
 public class Sw_자릿수더하기 {

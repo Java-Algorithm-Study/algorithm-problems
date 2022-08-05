@@ -1,5 +1,3 @@
-package diff2;
-
 import java.util.Scanner;
 
 public class Sw_지그재그숫자 {

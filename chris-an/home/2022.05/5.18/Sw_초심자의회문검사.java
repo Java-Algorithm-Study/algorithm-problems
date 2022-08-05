@@ -1,5 +1,3 @@
-package diff2;
-
 import java.util.Scanner;
 
 public class Sw_초심자의회문검사 {

@@ -1,5 +1,3 @@
-package diff2;
-
 import java.util.Scanner;
 
 public class Sw_파스칼삼각형 {

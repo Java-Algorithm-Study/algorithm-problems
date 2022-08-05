@@ -1,5 +1,3 @@
-package diff1;
-
 public class Sw_대각선출력하기 {
     public static void main(String[] args) {
         StringBuilder sb = new StringBuilder();

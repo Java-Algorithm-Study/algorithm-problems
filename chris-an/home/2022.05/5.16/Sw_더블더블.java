@@ -1,6 +1,3 @@
-package diff1;
-
-
 import java.util.Scanner;
 
 public class Sw_더블더블 {

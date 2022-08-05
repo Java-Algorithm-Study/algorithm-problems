@@ -6,8 +6,8 @@ public class Pro_60057 {
 
         for (int size = 1; size <= length / 2; size++) {
             int count = 1;
-            int sLength = 0;
             int mod = length % size;
+            int sLength = mod;
             int lastCursor = length - mod - 2 * size;
 
             for (int i = 0; i <= lastCursor; i += size) {
@@ -17,21 +17,22 @@ public class Pro_60057 {
                 // first 랑 second 같을 때
                 if (first.equals(second)) {
                     count++;
-                    if (i == lastCursor) sLength += second.length() + String.valueOf(count).length();
+                    if (i == lastCursor)
+                        sLength += second.length() + String.valueOf(count).length();
                 }
 
                 //first 랑 second 다를 때
                 else {
                     if (i == lastCursor) sLength += second.length();
                     if (count > 1) {
-                        sLength += String.valueOf(count).length() + first.length();
+                        sLength += first.length() + String.valueOf(count).length();
                     } else {
                         sLength += first.length();
                     }
                     count = 1;
                 }
             }
-            sLength += mod;
+            //sLength += mod;
             min = Math.min(sLength, min);
         }
         return min;
