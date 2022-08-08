@@ -3,7 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-/**
+/** 
  * [11052] 카드 구매하기
  * https://www.acmicpc.net/problem/11052
  *
