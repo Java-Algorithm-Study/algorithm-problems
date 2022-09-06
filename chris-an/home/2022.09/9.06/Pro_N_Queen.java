@@ -2,14 +2,12 @@
 public class Pro_N_Queen {
     int result;
     boolean[] colLine;
-    boolean[] rowLine;
     boolean[] ldruLine;
     boolean[] lurdLine;
 
     public void dfs(int row, int n) {
         if(row == n) {
             result++;
-            //System.out.println("in");
             return;
         }
 
