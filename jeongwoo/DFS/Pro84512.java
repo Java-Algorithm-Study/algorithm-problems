@@ -10,11 +10,6 @@ import java.util.TreeMap;
  * 2. depth >= 5가 되면 return하고, 맨 뒷글자가 변경되어야 한다.
  * 3. map에 index와 같이 넣어서 word가 있으면 value를 리턴한다.
  *
- * -시간 복잡도
- * 1.
- *
- * -자료 구조
- * 1.
  */
 
 public class Pro84512 {
