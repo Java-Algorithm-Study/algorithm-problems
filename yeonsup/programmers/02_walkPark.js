@@ -32,7 +32,7 @@ function solution(park, routes) {
                     }
                 }
             }
-        } else if(direction === "S") {1
+        } else if(direction === "S") {
             if((x + distance) >= xMax) return;
             else {
                 let temp = x;
