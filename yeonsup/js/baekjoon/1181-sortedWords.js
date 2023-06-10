@@ -2,7 +2,7 @@ const filePath = process.platform === "linux" ? "/dev/stdin" : "./input-1181.txt
 const [size, ...input] = require("fs").readFileSync(filePath).toString().split("\n");
 
 function solution(size, input) {
-    let words = Array.of(...new Set(input)).flat();
+    let words = Array.of(...new Set(input)).filter(v => v);
     words.sort((a, b) => {
         if(a.length < b.length) {
             return -1;
