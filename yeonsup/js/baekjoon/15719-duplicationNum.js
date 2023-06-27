@@ -18,5 +18,4 @@ function solution(size, input) {
 
     return Number(B - A);
 }
-
 console.log(solution(size, input));
