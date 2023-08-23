@@ -1,4 +1,4 @@
-package leetcode;
+package yeonsup.java.leetcode;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

@@ -1,4 +1,4 @@
-package leetcode.premiumalgo100.hasing;
+package yeonsup.java.leetcode;
 
 import java.util.Arrays;
 import java.util.HashMap;

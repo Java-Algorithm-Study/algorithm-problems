@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.util.Arrays;
+package yeonsup.java.leetcode;
 
 public class ReverseWordsInaString {
     public void reverseWords(char[] s) {
