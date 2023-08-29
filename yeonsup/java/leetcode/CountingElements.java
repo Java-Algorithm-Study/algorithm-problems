@@ -1,4 +1,4 @@
-package leetcode.premiumalgo100.hasing;
+package yeonsup.java.leetcode;
 
 public class CountingElements {
 
